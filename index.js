@@ -88,6 +88,9 @@ function playRound(humanChoice, computerChoice) {
         console.log("Draw game!");
 
     }
+    else {
+        console.log("Choose a word between rock, paper and scissors");
+    }
 
 
     console.log("Your score: ${humanScore}");
