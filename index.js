@@ -1,11 +1,11 @@
-function getComputerChoice(x = Math.round(Math.random() * 3)) {
-    if (x === 1) {
+function getComputerChoice(x = Math.round(Math.random() * 2)) {
+    if (x === 0) {
         console.log("rock");
     }
-    else if (x === 2) {
+    else if (x === 1) {
         console.log("paper");
     }
-    else if (x === 3) {
+    else if (x === 2) {
         console.log("scissors");
     } else {
         console.log("No match found!");
@@ -15,15 +15,15 @@ getComputerChoice();
 
 
 
-function getHumanChoice(x = window.prompt("Choose a Number Between 1 and 3")) {
+function getHumanChoice(x = window.prompt("Choose a word between rock, paper and scissors")) {
 
-    if (x == 1) {
+    if (x == "rock") {
         console.log("rock");
     }
-    else if (x == 2) {
+    else if (x == "paper") {
         console.log("paper");
     }
-    else if (x == 3) {
+    else if (x == "scissors") {
         console.log("scissors");
     }
     else {
@@ -32,6 +32,42 @@ function getHumanChoice(x = window.prompt("Choose a Number Between 1 and 3")) {
 }
 getHumanChoice();
 
+let humanScore = 0;
+let computerScore = 0;
+
+function playRound(humanChoice, computerChoice) {
+    if (humanChoice == "rock" && computerChoice == "scissors") {
+
+        console.log(" You win, rock beats scissors");
+        humanScore += 1;
+    }
+
+    else if (humanChoice == "paper" && computerChoice == "rock") {
+
+        console.log("You win, paper beats rock");
+        humanScore += 1;
+    }
+
+    else if (humanChoice == "scissors" && computerChoice == "rock") {
+
+        console.log("You lose, rock beats scissors");
+        computerScore += 1;
+    } else {
+        console.log("Draw game!");
+    }
+
+    console.log("Your score: ${humanScore}");
+    console.log("Computer score: ${computerScore}");
+}
+
+
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+
+
+playRound(humanSelection, computerSelection);
 
 
 
