@@ -129,9 +129,13 @@ function playGame() {
 }
 
 const rockButton = document.querySelector("#rck");
+rockButton.style.backgroundColor = "green";
 const paperButton = document.querySelector("#pap");
+paperButton.style.backgroundColor = "green";
 const scissorsButton = document.querySelector("#sci");
-const stopButton = document.querySelector("#stop")
+scissorsButton.style.backgroundColor = "green";
+const stopButton = document.querySelector("#stop");
+stopButton.style.backgroundColor = "blue";
 const para = document.querySelector("#para");
 const parap = document.querySelector("#parap");
 const parapp = document.querySelector("#parapp");
@@ -149,9 +153,16 @@ scissorsButton.addEventListener('click', playGame
 
 function restartButton() {
 
-    para.textContent = "Choose a Game";
-    parap.textContent = "";
-    parapp.textContent = "";
+    para.innerHTML = "Choose a Game";
+    parap.innerHTML = "Game of 5, Score: 0 - 0";
+
+    parapp.innerHTML = "";
+
+    humanScore = 0;
+    computerScore = 0;
+
+
+
 }
 
 stopButton.addEventListener("click", restartButton)
