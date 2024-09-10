@@ -1,0 +1,57 @@
+body {
+    background-color: rgb(234, 235, 231);
+    color: black;
+}
+
+
+/*#section {
+    background-color: blue;
+    padding: 100px;
+}
+
+div#container {
+    background-color: orangered;
+    border-color: 100px solid black;
+    padding: ;
+}*/
+
+#para {
+    margin-left: 570px;
+}
+
+#parap,
+#parapp {
+    margin-left: 550px;
+}
+
+
+.head {
+    display: flex;
+    justify-content: center;
+}
+
+#rck {
+    margin-left: 400px;
+    margin-top: 30px;
+    padding: 50px;
+    color: white;
+    border-radius: 50px;
+}
+
+#pap {
+    padding: 50px;
+    color: white;
+    border-radius: 50px;
+}
+
+#sci {
+    padding: 50px;
+    color: white;
+    border-radius: 50px;
+}
+
+#stop {
+    padding: 50px;
+    color: white;
+    border-radius: 50px;
+}
